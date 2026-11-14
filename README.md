@@ -35,16 +35,39 @@ Use the initial research to narrow your next experiment. Desk research and forec
 
 ## Quick install
 
+From your target project, run:
+
 ```bash
-# 1. Clone your own GitHub repository containing these files.
-# 2. Install the skills in the repository where your agent will work.
+npx skills add euphoo-01/startup_pitch_skills
+```
+
+Choose the skills and agents in the interactive installer. Installation is project-local by default; add `-g` for a user-wide installation. The Skills CLI requires Node.js 22.20 or later; see the [CLI documentation](https://github.com/vercel-labs/skills).
+
+To install only one skill:
+
+```bash
+npx skills add euphoo-01/startup_pitch_skills --skill business-analyst
+npx skills add euphoo-01/startup_pitch_skills --skill investor-slides
+```
+
+To list available skills without installing them:
+
+```bash
+npx skills add euphoo-01/startup_pitch_skills --list
+```
+
+Alternatively, clone this repository and use the bundled Python installer:
+
+```bash
+git clone https://github.com/euphoo-01/startup_pitch_skills.git
+cd startup_pitch_skills
 python install.py --target all --project /path/to/your/target-project
 
 # Optional: use for the current directory only
 python install.py --target codex --project .
 ```
 
-Install paths: Codex/Cursor `.agents/skills/`; Claude Code `.claude/skills/`. For user-wide installs: `--scope user`. If replacing existing skill folders: `--force`.
+Python installer paths: Codex/Cursor `.agents/skills/`; Claude Code `.claude/skills/`. For user-wide installs: `--scope user`. If replacing existing skill folders: `--force`.
 
 ## Requirements
 
