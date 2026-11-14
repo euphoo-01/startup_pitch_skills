@@ -1,0 +1,85 @@
+{
+  "evidence": [
+    {
+      "id": "assumption-pricing",
+      "status": "hypothesis",
+      "claim": "Monthly price and new customers are illustrative",
+      "source": "Synthetic demo only"
+    }
+  ],
+  "tax_provenance": {
+    "source": "SYNTHETIC TEST VALUES — MUST REPLACE WITH OFFICIAL LAW",
+    "effective_date": "2027-01-01",
+    "verified": false
+  },
+  "market": {
+    "sizing_basis": "control_month_active_user_equivalent",
+    "levels": {
+      "PAM": {
+        "audience": 250000,
+        "basis": "control_month_active_user_equivalent",
+        "source_ids": [
+          "synthetic"
+        ]
+      },
+      "TAM": {
+        "audience": 50000,
+        "basis": "control_month_active_user_equivalent",
+        "source_ids": [
+          "synthetic"
+        ]
+      },
+      "SAM": {
+        "audience": 12000,
+        "basis": "control_month_active_user_equivalent",
+        "source_ids": [
+          "synthetic"
+        ]
+      },
+      "SOM": {
+        "audience": 950,
+        "basis": "control_month_active_user_equivalent",
+        "source_ids": [
+          "synthetic"
+        ]
+      }
+    },
+    "monetization": {
+      "method": "from_model",
+      "scenario": "base",
+      "end_month": 18,
+      "revenue_stream_ids": [
+        "workspace"
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "name": "base",
+      "volume_multiplier": 1,
+      "price_multiplier": 1,
+      "variable_cost_multiplier": 1,
+      "fixed_cost_multiplier": 1,
+      "retention_delta": 0,
+      "conversion_multiplier": 1
+    },
+    {
+      "name": "downside",
+      "volume_multiplier": 0.85,
+      "price_multiplier": 1,
+      "variable_cost_multiplier": 1.08,
+      "fixed_cost_multiplier": 1.07,
+      "retention_delta": -0.035,
+      "conversion_multiplier": 1
+    },
+    {
+      "name": "upside",
+      "volume_multiplier": 1.15,
+      "price_multiplier": 1.03,
+      "variable_cost_multiplier": 1,
+      "fixed_cost_multiplier": 1,
+      "retention_delta": 0.02,
+      "conversion_multiplier": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "business-investment-skillkit",
+  "private": true,
+  "version": "2.1.0",
+  "description": "Portable evidence-first business analysis and editable investor slides skills",
+  "license": "MIT",
+  "scripts": {
+    "test": "python -m unittest discover -s tests -v",
+    "demo": "python scripts/build_demo.py"
+  },
+  "dependencies": {
+    "pptxgenjs": "4.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

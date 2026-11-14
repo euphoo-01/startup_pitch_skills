@@ -1,0 +1,32 @@
+{
+  "project": {"name":"Synthetic Study SaaS — DEMO ONLY", "currency":"USD", "country":"Exampleland", "tax_regime":"fictional regime — not valid for real investment use", "start_month":"2027-01", "months":18, "mode":"standard"},
+  "revenues": [
+    {"id":"plus", "kind":"freemium", "unit_price":15.0, "cogs_per_unit":2.5, "processing_fee_rate":0.025,
+     "new_free":[350,450,600,700,850,1000,1100,1250,1400,1450,1600,1650,1550,1700,1750,1800,1900,2000],
+     "new_paid":[0,0,10,15,18,22,30,38,44,60,70,75,80,90,100,120,140,150],
+     "paid_retention_rate":0.88, "free_retention_rate":0.70, "free_service_cost":0.18,
+     "limit_month":7, "limit_conversion_rate":0.12, "later_conversion_rate":0.025, "source_ids":["hypothesis-freemium"]},
+    {"id":"sponsors", "kind":"units", "unit_price":180, "cogs_per_unit":12, "processing_fee_rate":0,
+     "monthly_units":[0,0,0,0,0,0,1,1,1,2,2,3,3,3,4,4,4,5], "source_ids":["hypothesis-ads"]}
+  ],
+  "operating": {"fixed_monthly":600, "payroll_monthly":[0,0,0,500,500,800,800,800,1100,1100,1100,1100,1500,1500,1600,1600,1800,1800],
+    "marketing_monthly":[250,300,450,450,600,600,650,650,800,800,850,900,900,900,1000,1000,1100,1100],
+    "capex_monthly":[2500,0,0,0,0,0,0,0,0,1200,0,0,0,0,0,0,0,0], "capex_useful_life_months":24,
+    "working_capital_delta_monthly":0},
+  "taxes": {"source":"DEMO fake rates; not a legal reference", "effective_date":"2027-01-01", "verified":false,
+    "employer_payroll_rate":0.14, "corporate_income_rate":0.20, "turnover_tax_rate":0,
+    "vat_rate":0.10, "vat_taxable_revenue_share":1, "vat_creditable_opex_share":0.40, "vat_creditable_capex_share":0.70,
+    "corporate_tax_payment_lag_months":1, "vat_payment_lag_months":1, "loss_carryforward":true},
+  "financing": {"opening_cash":500, "minimum_cash_reserve":2000,
+    "equity_injections_monthly":[4000,0,0,0,0,0,2500,0,0,0,0,0,0,0,0,0,0,0],
+    "investor_contributions_monthly":[2000,0,0,0,0,0,2500,0,0,0,0,0,0,0,0,0,0,0],
+    "debt_draws_monthly":0, "debt_principal_monthly":0, "dividends_monthly":0, "debt_interest_rate_monthly":0},
+  "valuation": {"annual_discount_rate":0.20, "pre_money_valuation":50000, "investor_equity_fraction":0.15, "exit_proceeds_monthly":0},
+  "scenarios": [
+    {"name":"base", "volume_multiplier":1,"price_multiplier":1,"variable_cost_multiplier":1,"fixed_cost_multiplier":1,"retention_delta":0,"conversion_multiplier":1},
+    {"name":"downside", "volume_multiplier":0.85,"price_multiplier":1,"variable_cost_multiplier":1.05,"fixed_cost_multiplier":1.05,"retention_delta":-0.04,"conversion_multiplier":0.75},
+    {"name":"upside", "volume_multiplier":1.15,"price_multiplier":1,"variable_cost_multiplier":1,"fixed_cost_multiplier":1,"retention_delta":0.025,"conversion_multiplier":1.12}
+  ],
+  "evidence": [{"id":"hypothesis-freemium", "status":"hypothesis", "claim":"Trial users may convert after limits", "source":"synthetic example"},
+               {"id":"hypothesis-ads", "status":"hypothesis", "claim":"Sponsorship contracts", "source":"synthetic example"}]
+}

@@ -1,0 +1,41 @@
+{
+  "sizing_basis": "control_month_active_user_equivalent",
+  "currency": "USD",
+  "annual_net_revenue_per_audience": 252.0347401035736,
+  "scenario_method": "model scenario=base; 12 months M7–M18; stream ids=workspace",
+  "levels": {
+    "PAM": {
+      "audience": 250000.0,
+      "basis": "control_month_active_user_equivalent",
+      "source_ids": [
+        "synthetic"
+      ],
+      "annual_revenue_potential": 63008685.0258934
+    },
+    "TAM": {
+      "audience": 50000.0,
+      "basis": "control_month_active_user_equivalent",
+      "source_ids": [
+        "synthetic"
+      ],
+      "annual_revenue_potential": 12601737.00517868
+    },
+    "SAM": {
+      "audience": 12000.0,
+      "basis": "control_month_active_user_equivalent",
+      "source_ids": [
+        "synthetic"
+      ],
+      "annual_revenue_potential": 3024416.8812428834
+    },
+    "SOM": {
+      "audience": 950.0,
+      "basis": "control_month_active_user_equivalent",
+      "source_ids": [
+        "synthetic"
+      ],
+      "annual_revenue_potential": 239433.00309839493
+    }
+  },
+  "caution": "Normalized market capacity at SAME scenario economics. It is not proven demand; do not equate it with achievable sales or investor return."
+}

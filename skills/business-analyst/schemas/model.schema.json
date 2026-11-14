@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Business Analyst Output v1",
+  "type": "object", "required": ["project", "model_version", "results", "warnings"],
+  "properties": {
+    "project": {"type": "object"},
+    "model_version": {"type": "string"},
+    "results": {"type": "object", "additionalProperties": {
+      "type": "object", "required": ["metrics", "monthly"],
+      "properties": {"metrics": {"type": "object"}, "monthly": {"type": "array"}}
+    }},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  }
+}

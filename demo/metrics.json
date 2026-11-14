@@ -1,0 +1,233 @@
+{
+  "project": {
+    "name": "Northline / Synthetic B2B SaaS (DEMO)",
+    "currency": "USD",
+    "country": "Exampleland",
+    "tax_regime": "SIMULATED — not a real jurisdiction",
+    "start_month": "2027-01",
+    "months": 18,
+    "mode": "standard"
+  },
+  "model_version": "1.0.0",
+  "results": {
+    "base": {
+      "scenario": "base",
+      "months": 18,
+      "currency": "USD",
+      "revenue_total": 258028.13994539191,
+      "ebitda_total": 25833.43906574125,
+      "gross_margin": 0.8115942028985508,
+      "contribution_margin": 0.7865942028985508,
+      "first_ebitda_positive_month": 10,
+      "sustained_ebitda_positive_month_in_horizon": 10,
+      "first_operating_cash_positive_month": 10,
+      "project_fcf_payback_month": 17,
+      "investor_cash_payback_month": null,
+      "break_even_primary_stream": "workspace",
+      "break_even_reference_month": 12,
+      "break_even_primary_active_units": 197,
+      "break_even_primary_revenue": 13593.0,
+      "break_even_note": "Local EBITDA break-even for primary stream, other streams/free costs fixed at reference month; changes in capacity or mix require recomputation.",
+      "minimum_committed_cash": -26965.642796237837,
+      "minimum_cash_month": 10,
+      "additional_funding_required": 29965.642796237837,
+      "recommended_quarterly_tranches": [
+        {
+          "month_number": 1,
+          "month": "2027-01",
+          "amount": 10511.93
+        },
+        {
+          "month_number": 4,
+          "month": "2027-04",
+          "amount": 12161.24
+        },
+        {
+          "month_number": 7,
+          "month": "2027-07",
+          "amount": 5708.73
+        },
+        {
+          "month_number": 10,
+          "month": "2027-10",
+          "amount": 1583.74
+        }
+      ],
+      "cash_at_horizon": 28965.83564325041,
+      "project_fcf_at_horizon": 14965.835643250412,
+      "income_tax_payable_at_horizon": 0,
+      "vat_payable_at_horizon": 0,
+      "unused_vat_credit_at_horizon": 0.0,
+      "tax_loss_carried_at_horizon": 0.0,
+      "debt_outstanding_at_horizon": 0.0,
+      "balance_sheet_reconciliation_at_horizon": 0.0,
+      "blended_marketing_cac_per_new_paid": 46.01063829787234,
+      "new_paying_customers_total": 752.0,
+      "subscription_ltv": {
+        "workspace": {
+          "monthly_contribution": 54.27499999999999,
+          "paid_retention": 0.93,
+          "contribution_ltv_horizon": 565.3689548248822,
+          "ltv_to_blended_cac": 12.28778768867952
+        }
+      },
+      "project_fcf_npv": 5388.76660108836,
+      "investor_monthly_irr": null,
+      "investor_annual_irr": null,
+      "investor_moic": null,
+      "investor_npv": 0.0,
+      "valuation_pre_money": 100000,
+      "valuation_post_money_simple_round": 100000.0,
+      "investor_ownership_implied_simple_round": 0.0,
+      "investor_equity_fraction": 0.15
+    },
+    "downside": {
+      "scenario": "downside",
+      "months": 18,
+      "currency": "USD",
+      "revenue_total": 193886.70593684242,
+      "ebitda_total": -39941.291441336114,
+      "gross_margin": 0.7965217391304348,
+      "contribution_margin": 0.7715217391304349,
+      "first_ebitda_positive_month": 14,
+      "sustained_ebitda_positive_month_in_horizon": 14,
+      "first_operating_cash_positive_month": 14,
+      "project_fcf_payback_month": null,
+      "investor_cash_payback_month": null,
+      "break_even_primary_stream": "workspace",
+      "break_even_reference_month": 12,
+      "break_even_primary_active_units": 215,
+      "break_even_primary_revenue": 14835.0,
+      "break_even_note": "Local EBITDA break-even for primary stream, other streams/free costs fixed at reference month; changes in capacity or mix require recomputation.",
+      "minimum_committed_cash": -47772.99476536931,
+      "minimum_cash_month": 13,
+      "additional_funding_required": 50772.99476536931,
+      "recommended_quarterly_tranches": [
+        {
+          "month_number": 1,
+          "month": "2027-01",
+          "amount": 12579.33
+        },
+        {
+          "month_number": 4,
+          "month": "2027-04",
+          "amount": 16142.12
+        },
+        {
+          "month_number": 7,
+          "month": "2027-07",
+          "amount": 12679.23
+        },
+        {
+          "month_number": 10,
+          "month": "2027-10",
+          "amount": 8520.36
+        },
+        {
+          "month_number": 13,
+          "month": "2028-01",
+          "amount": 851.96
+        }
+      ],
+      "cash_at_horizon": -32741.291441336132,
+      "project_fcf_at_horizon": -46741.29144133613,
+      "income_tax_payable_at_horizon": 0,
+      "vat_payable_at_horizon": 0,
+      "unused_vat_credit_at_horizon": 0.0,
+      "tax_loss_carried_at_horizon": 44366.29144133613,
+      "debt_outstanding_at_horizon": 0.0,
+      "balance_sheet_reconciliation_at_horizon": -3.637978807091713e-12,
+      "blended_marketing_cac_per_new_paid": 57.919274092615765,
+      "new_paying_customers_total": 639.2,
+      "subscription_ltv": {
+        "workspace": {
+          "monthly_contribution": 53.23499999999999,
+          "paid_retention": 0.895,
+          "contribution_ltv_horizon": 438.1628953827742,
+          "ltv_to_blended_cac": 7.565061928817171
+        }
+      },
+      "project_fcf_npv": -45483.56571472368,
+      "investor_monthly_irr": null,
+      "investor_annual_irr": null,
+      "investor_moic": null,
+      "investor_npv": 0.0,
+      "valuation_pre_money": 100000,
+      "valuation_post_money_simple_round": 100000.0,
+      "investor_ownership_implied_simple_round": 0.0,
+      "investor_equity_fraction": 0.15
+    },
+    "upside": {
+      "scenario": "upside",
+      "months": 18,
+      "currency": "USD",
+      "revenue_total": 329524.1688096832,
+      "ebitda_total": 83880.08042557619,
+      "gross_margin": 0.8170817503869425,
+      "contribution_margin": 0.7920817503869425,
+      "first_ebitda_positive_month": 9,
+      "sustained_ebitda_positive_month_in_horizon": 9,
+      "first_operating_cash_positive_month": 9,
+      "project_fcf_payback_month": 14,
+      "investor_cash_payback_month": null,
+      "break_even_primary_stream": "workspace",
+      "break_even_reference_month": 12,
+      "break_even_primary_active_units": 190,
+      "break_even_primary_revenue": 13503.300000000001,
+      "break_even_note": "Local EBITDA break-even for primary stream, other streams/free costs fixed at reference month; changes in capacity or mix require recomputation.",
+      "minimum_committed_cash": -17526.26378646723,
+      "minimum_cash_month": 8,
+      "additional_funding_required": 20526.26378646723,
+      "recommended_quarterly_tranches": [
+        {
+          "month_number": 1,
+          "month": "2027-01",
+          "amount": 9767.46
+        },
+        {
+          "month_number": 4,
+          "month": "2027-04",
+          "amount": 9583.02
+        },
+        {
+          "month_number": 7,
+          "month": "2027-07",
+          "amount": 1175.78
+        }
+      ],
+      "cash_at_horizon": 75983.6151447167,
+      "project_fcf_at_horizon": 61983.61514471671,
+      "income_tax_payable_at_horizon": 0,
+      "vat_payable_at_horizon": 0,
+      "unused_vat_credit_at_horizon": 0.0,
+      "tax_loss_carried_at_horizon": 0.0,
+      "debt_outstanding_at_horizon": 0.0,
+      "balance_sheet_reconciliation_at_horizon": 1.4551915228366852e-11,
+      "blended_marketing_cac_per_new_paid": 40.00925069380204,
+      "new_paying_customers_total": 864.8,
+      "subscription_ltv": {
+        "workspace": {
+          "monthly_contribution": 56.29325,
+          "paid_retention": 0.9500000000000001,
+          "contribution_ltv_horizon": 678.6553013490382,
+          "ltv_to_blended_cac": 16.962459670712374
+        }
+      },
+      "project_fcf_npv": 43965.25276544414,
+      "investor_monthly_irr": null,
+      "investor_annual_irr": null,
+      "investor_moic": null,
+      "investor_npv": 0.0,
+      "valuation_pre_money": 100000,
+      "valuation_post_money_simple_round": 100000.0,
+      "investor_ownership_implied_simple_round": 0.0,
+      "investor_equity_fraction": 0.15
+    }
+  },
+  "warnings": [
+    "BLOCKER: tax jurisdiction/regime/rates not verified with authoritative effective-dated sources",
+    "Prices and input costs are net of VAT, recognized and collected in the same month; revenue deferrals/receivable schedules not modeled.",
+    "Project FCF is approximate and uses leveraged income tax; project valuation needs a dedicated unlevered tax adjustment when debt is material.",
+    "Simplified cash/PP&E/net-WC/tax/debt/equity balance sheet is provided; inventory details, deferred revenue and advanced country tax rules are not modeled."
+  ]
+}

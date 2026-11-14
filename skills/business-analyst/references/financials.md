@@ -1,0 +1,13 @@
+# Financial modeling — monthly ≤36 periods
+
+Use deterministic driver-based formulas. Track volume, net-of-VAT price, sales recognized, collections, COGS, variable selling/processing, fixed costs, marketing, payroll+employer taxes, CAPEX/depreciation, interest, income tax, VAT/turnover and explicit working capital. Classify by nature and timing. Three-statement model where supported; if working-capital balance details missing, report cash bridge and balance limitations instead of claiming full reconciliation.
+
+**Profitability:** gross profit = net revenue - COGS. Contribution = gross profit - other variable costs - turnover-based operating tax. EBITDA = contribution - fixed cash operating costs including payroll. EBIT = EBITDA - depreciation. PBT = EBIT - interest. Net income = PBT - income tax. Noncash charges add back in cash flow; capex reduces cash when paid.
+
+**Taxes:** Tax regimes are jurisdiction-, entity- and date-specific. Research current official source/rate/exemptions/thresholds/payment timing. Income tax is only on applicable taxable profits, employer contributions are separately funded by employer, customer VAT may be recoverable and must not become revenue. Record source and effective date. The v1 calculator uses simplified monthly corporate income tax with optional loss-carryforward, employer charges, turnover tax and VAT cash credits/settlements. Unsupported country-specific rules require an explicit blocker.
+
+**Break-even:** compute minimal active units for EBITDA >=0 at a selected month, using net contribution per additional unit, holding other streams and non-step costs constant. For multi-product business specify the product mix or name the primary stream; for capacity changes/cost steps solve iteratively. Also compute revenue threshold, first EBITDA-positive month, sustainable EBITDA-positive month *within forecast*, positive FCF month, cumulative project FCF payback, separate investor payback.
+
+**Cash and funding:** opening cash + operating CF - capex + funding - principal/dividends = ending cash. Peak external funding = maximum deficit beneath minimum reserve after committed sources, including timing and payment delays; show actual month and required tranche schedule. Project FCF excludes equity/debt financing; investor CF includes their paid-in and received distributions. EBITDA ≠ investor check size.
+
+**Scenarios:** base/down/up share structure; vary conversion/volume, retention, pricing, acquisition spend and costs. At minimum test +/-10% and +/-15% volumes on request. If no break-even by month 36, report "not reached within horizon" rather than extrapolating certainty.

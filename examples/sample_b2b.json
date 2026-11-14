@@ -1,0 +1,18 @@
+{
+  "project": {"name":"Northline / Synthetic B2B SaaS (DEMO)","currency":"USD","country":"Exampleland","tax_regime":"SIMULATED — not a real jurisdiction","start_month":"2027-01","months":18,"mode":"standard"},
+  "revenues": [
+    {"id":"workspace","kind":"subscription","unit_price":69,"cogs_per_unit":13,"processing_fee_rate":0.025,"paid_retention_rate":0.93,
+     "new_paid":[10,12,15,18,20,24,28,30,34,40,45,50,56,62,68,74,80,86],"source_ids":["assumption-pricing"]}
+  ],
+  "operating":{"fixed_monthly":1300,"payroll_monthly":[4000,4000,4000,4500,4500,5000,5000,5500,6000,6000,6500,6500,7200,7200,7800,7800,8400,8400],"marketing_monthly":[900,1000,1100,1200,1300,1400,1550,1700,1800,1900,2050,2200,2400,2500,2600,2800,3000,3200],"capex_monthly":[5000,0,0,0,0,0,0,0,0,1800,0,0,0,0,0,0,0,0],"capex_useful_life_months":24,"working_capital_delta_monthly":0},
+  "taxes":{"source":"SYNTHETIC TEST VALUES — MUST REPLACE WITH OFFICIAL LAW","effective_date":"2027-01-01","verified":false,"employer_payroll_rate":0.10,"corporate_income_rate":0.19,"turnover_tax_rate":0,"vat_rate":0.00,"loss_carryforward":true},
+  "financing":{"opening_cash":4000,"minimum_cash_reserve":3000,"equity_injections_monthly":[10000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"investor_contributions_monthly":0,"debt_draws_monthly":0,"debt_principal_monthly":0,"dividends_monthly":0,"debt_interest_rate_monthly":0},
+  "valuation":{"annual_discount_rate":0.20,"pre_money_valuation":100000,"investor_equity_fraction":0.15,"exit_proceeds_monthly":0},
+  "scenarios":[
+    {"name":"base","volume_multiplier":1,"price_multiplier":1,"variable_cost_multiplier":1,"fixed_cost_multiplier":1,"retention_delta":0,"conversion_multiplier":1},
+    {"name":"downside","volume_multiplier":0.85,"price_multiplier":1,"variable_cost_multiplier":1.08,"fixed_cost_multiplier":1.07,"retention_delta":-0.035,"conversion_multiplier":1},
+    {"name":"upside","volume_multiplier":1.15,"price_multiplier":1.03,"variable_cost_multiplier":1,"fixed_cost_multiplier":1,"retention_delta":0.02,"conversion_multiplier":1}
+  ],
+  "evidence":[{"id":"assumption-pricing","status":"hypothesis","claim":"Monthly price and new customers are illustrative","source":"Synthetic demo only"}],
+  "market":{"sizing_basis":"control_month_active_user_equivalent","levels":{"PAM":{"audience":250000,"basis":"control_month_active_user_equivalent","source_ids":["synthetic"]},"TAM":{"audience":50000,"basis":"control_month_active_user_equivalent","source_ids":["synthetic"]},"SAM":{"audience":12000,"basis":"control_month_active_user_equivalent","source_ids":["synthetic"]},"SOM":{"audience":950,"basis":"control_month_active_user_equivalent","source_ids":["synthetic"]}},"monetization":{"method":"from_model","scenario":"base","end_month":18,"revenue_stream_ids":["workspace"]}}
+}

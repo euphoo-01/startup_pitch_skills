@@ -1,0 +1,323 @@
+{
+  "title": "Northline / investor deck",
+  "brand": "NORTHLINE",
+  "language": "ru-RU",
+  "theme": {
+    "preset": "editorial-blue",
+    "font": "Inter",
+    "headline_font": "Inter Display"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "section": "INVESTOR DECK / 2027",
+      "eyebrow": "B2B SAAS",
+      "headline": "Операционный контур\nдля малых команд.",
+      "subtitle": "Northline собирает задачи, статусы и решения в одном рабочем пространстве.",
+      "footer": "INVESTOR DECK TEMPLATE",
+      "year": "01"
+    },
+    {
+      "type": "statement",
+      "section": "01 / CONTEXT",
+      "eyebrow": "PROBLEM",
+      "headline": "Команды теряют контекст между инструментами.",
+      "subtitle": "Задачи живут в трекере, согласования — в чатах, данные — в таблицах. Из-за этого руководители видят картину слишком поздно.",
+      "side_label": "WHY NOW"
+    },
+    {
+      "type": "split",
+      "section": "02 / SOLUTION",
+      "title": "Один контур вместо разрозненных систем.",
+      "left_title": "СЕЙЧАС",
+      "left_body": "Файлы, дедлайны и решения разбросаны по разным сервисам. Ответственность и статус видно фрагментарно.",
+      "right_title": "С NORTHLINE",
+      "right_body": "Процессы, владельцы, сроки и ключевые решения собираются в одном месте."
+    },
+    {
+      "type": "steps",
+      "section": "03 / PRODUCT",
+      "title": "Продукт встроен в рабочий цикл.",
+      "steps": [
+        {
+          "title": "Подключить",
+          "body": "Импортировать текущие процессы без тяжёлого внедрения."
+        },
+        {
+          "title": "Упорядочить",
+          "body": "Свести задачи, статусы и блокеры в единый контур."
+        },
+        {
+          "title": "Ускорить",
+          "body": "Автоматизировать повторяемые действия и контроль исполнения."
+        }
+      ]
+    },
+    {
+      "type": "market",
+      "section": "04 / MARKET",
+      "title": "Рынок можно наращивать от доступного сегмента.",
+      "audience_label": "эквивалент активной клиентской базы"
+    },
+    {
+      "type": "matrix",
+      "section": "05 / COMPETITION",
+      "title": "Northline закрывает узкий операционный слой.",
+      "row_header": "КРИТЕРИЙ",
+      "headers": [
+        "Таблицы",
+        "Task trackers",
+        "BI",
+        "Northline"
+      ],
+      "rows": [
+        {
+          "name": "Задачи и сроки",
+          "values": [
+            "частично",
+            "да",
+            "нет",
+            "да"
+          ]
+        },
+        {
+          "name": "Контекст решений",
+          "values": [
+            "нет",
+            "частично",
+            "частично",
+            "да"
+          ]
+        },
+        {
+          "name": "Операционные метрики",
+          "values": [
+            "вручную",
+            "частично",
+            "да",
+            "да"
+          ]
+        },
+        {
+          "name": "Быстрый запуск",
+          "values": [
+            "да",
+            "да",
+            "сложно",
+            "да"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "section": "06 / MONETIZATION",
+      "title": "Подписка — базовая модель монетизации.",
+      "label": "SUBSCRIPTION",
+      "price": "69 USD",
+      "price_note": "за рабочее пространство / месяц",
+      "bullets": [
+        "Повторяющаяся выручка",
+        "Ограниченные переменные издержки",
+        "Прозрачный CAC",
+        "Когортная проверка удержания"
+      ]
+    },
+    {
+      "type": "numbers",
+      "section": "07 / ECONOMICS",
+      "title": "Финансовый прогноз на 18 месяцев.",
+      "cards": [
+        {
+          "label": "ВЫРУЧКА · 18 МЕС.",
+          "metric": "results.base.revenue_total",
+          "format": "money_compact",
+          "unit": "USD",
+          "note": "Базовый сценарий"
+        },
+        {
+          "label": "EBITDA · 18 МЕС.",
+          "metric": "results.base.ebitda_total",
+          "format": "money_compact",
+          "unit": "USD",
+          "note": "Операционный результат"
+        },
+        {
+          "label": "ТРЕБУЕМОЕ ФИНАНСИРОВАНИЕ",
+          "metric": "results.base.additional_funding_required",
+          "format": "money_compact",
+          "unit": "USD",
+          "note": "С резервом"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "section": "08 / SCENARIOS",
+      "title": "EBITDA: базовый и стресс-сценарии.",
+      "chart_kind": "line",
+      "scale": 1000,
+      "series": [
+        {
+          "scenario": "base",
+          "field": "ebitda",
+          "label": "Base"
+        },
+        {
+          "scenario": "downside",
+          "field": "ebitda",
+          "label": "Downside"
+        },
+        {
+          "scenario": "upside",
+          "field": "ebitda",
+          "label": "Upside"
+        }
+      ],
+      "y_axis_label": "EBITDA, тыс. USD"
+    },
+    {
+      "type": "monthly-table",
+      "section": "09 / CAPITAL PLAN",
+      "title": "Помесячный burn и потребность в капитале · M1–M9.",
+      "scenario": "base",
+      "currency": "USD",
+      "start_month": 1,
+      "end_month": 9,
+      "fields": [
+        {
+          "field": "payroll_with_tax",
+          "label": "ФОТ+налоги",
+          "format": "money_compact"
+        },
+        {
+          "field": "marketing",
+          "label": "Маркетинг",
+          "format": "money_compact"
+        },
+        {
+          "field": "fixed_costs",
+          "label": "Постоянные",
+          "format": "money_compact"
+        },
+        {
+          "field": "capex",
+          "label": "CAPEX",
+          "format": "money_compact"
+        },
+        {
+          "field": "ebitda",
+          "label": "EBITDA",
+          "format": "money_compact"
+        },
+        {
+          "field": "funding_gap",
+          "label": "Пополнение",
+          "format": "money_compact"
+        }
+      ]
+    },
+    {
+      "type": "monthly-table",
+      "section": "10 / CAPITAL PLAN",
+      "title": "Помесячный burn, EBITDA и момент возврата · M10–M18.",
+      "scenario": "base",
+      "currency": "USD",
+      "start_month": 10,
+      "end_month": 18,
+      "fields": [
+        {
+          "field": "payroll_with_tax",
+          "label": "ФОТ+налоги",
+          "format": "money_compact"
+        },
+        {
+          "field": "marketing",
+          "label": "Маркетинг",
+          "format": "money_compact"
+        },
+        {
+          "field": "fixed_costs",
+          "label": "Постоянные",
+          "format": "money_compact"
+        },
+        {
+          "field": "ebitda",
+          "label": "EBITDA",
+          "format": "money_compact"
+        },
+        {
+          "field": "ending_cash_committed",
+          "label": "Cash EOM",
+          "format": "money_compact"
+        },
+        {
+          "field": "investor_cash_flow",
+          "label": "Выплата инвестору",
+          "format": "money_compact"
+        }
+      ],
+      "caption": "Если выплаты инвестору не заложены в горизонте модели, в колонке «Выплата инвестору» будут нули. Для дивидендов или возврата займа задайте соответствующие потоки в финансовой модели."
+    },
+    {
+      "type": "economics",
+      "section": "09 / UNIT ECONOMICS",
+      "title": "Порог операционной безубыточности.",
+      "cards": [
+        {
+          "label": "ПЕРВЫЙ EBITDA-ПЛЮС",
+          "metric": "results.base.first_ebitda_positive_month",
+          "unit": "месяц"
+        },
+        {
+          "label": "ЕДИНИЦ ДЛЯ БЕЗУБЫТОЧНОСТИ",
+          "metric": "results.base.break_even_primary_active_units",
+          "unit": "пространств"
+        },
+        {
+          "label": "РАСЧЁТНЫЙ CAC",
+          "metric": "results.base.blended_marketing_cac_per_new_paid",
+          "format": "fixed2",
+          "unit": "USD"
+        }
+      ]
+    },
+    {
+      "type": "timeline",
+      "section": "10 / ROADMAP",
+      "title": "Сначала доказательства. Затем масштабирование.",
+      "steps": [
+        {
+          "when": "М1–М3",
+          "title": "Discover",
+          "body": "Интервью, сегменты, первичные сигналы ценности."
+        },
+        {
+          "when": "М4–М6",
+          "title": "Pilot",
+          "body": "Платный пилот и цикл обратной связи."
+        },
+        {
+          "when": "М7–М12",
+          "title": "Prove",
+          "body": "Retention, CAC и повторные продажи."
+        },
+        {
+          "when": "М13–М18",
+          "title": "Scale",
+          "body": "Масштабирование подтверждённых каналов."
+        }
+      ]
+    },
+    {
+      "type": "closing",
+      "section": "11 / INVESTMENT",
+      "eyebrow": "NEXT STEP",
+      "headline": "Подтвердить спрос.\nЗатем ускорять рост.",
+      "subtitle": "Следующий этап — доказать удержание, CAC и воспроизводимость каналов привлечения.",
+      "metric": "results.base.additional_funding_required",
+      "format": "money_compact",
+      "unit": "USD"
+    }
+  ]
+}

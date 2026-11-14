@@ -1,0 +1,10 @@
+{
+  "project":{"name":"Synthetic Coffee Shop — DEMO ONLY", "currency":"EUR", "country":"Exampleland", "tax_regime":"fictional", "start_month":"2027-01", "months":12},
+  "revenues":[{"id":"coffee_cups", "kind":"units", "unit_price":4.2, "cogs_per_unit":1.15, "processing_fee_rate":0.018,
+               "monthly_units":[750,820,950,1050,1150,1200,1300,1350,1450,1500,1550,1600]}],
+  "operating":{"fixed_monthly":1800, "payroll_monthly":1800, "marketing_monthly":250, "capex_monthly":[7000,0,0,0,0,0,0,0,0,0,0,0], "capex_useful_life_months":48},
+  "taxes":{"source":"DEMO rates, not valid tax advice", "effective_date":"2027-01-01", "verified":false,
+           "employer_payroll_rate":0.1, "corporate_income_rate":0.15, "turnover_tax_rate":0, "vat_rate":0},
+  "financing":{"opening_cash":8000, "minimum_cash_reserve":1500},
+  "valuation":{"annual_discount_rate":0.18}
+}

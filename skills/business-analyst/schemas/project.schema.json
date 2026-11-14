@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Business Analyst Project Input v1",
+  "type": "object",
+  "required": ["project", "revenues", "operating", "taxes"],
+  "properties": {
+    "project": {
+      "type": "object", "required": ["name", "currency", "country", "start_month", "months", "tax_regime"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "currency": {"type": "string", "minLength": 3},
+        "country": {"type": "string", "minLength": 2},
+        "tax_regime": {"type": "string"},
+        "start_month": {"type": "string", "pattern": "^\\d{4}-(0[1-9]|1[0-2])$"},
+        "months": {"type": "integer", "minimum": 1, "maximum": 36},
+        "legal_form": {"type": "string"}, "mode": {"enum": ["standard", "deep"]}
+      }, "additionalProperties": true
+    },
+    "revenues": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["id", "kind", "unit_price", "cogs_per_unit"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["units", "subscription", "freemium"]},
+          "unit_price": {"type": "number", "minimum": 0},
+          "cogs_per_unit": {"type": "number", "minimum": 0},
+          "processing_fee_rate": {"type": "number", "minimum": 0, "maximum": 1},
+          "monthly_units": {"$ref": "#/$defs/monthly"},
+          "new_paid": {"$ref": "#/$defs/monthly"},
+          "new_free": {"$ref": "#/$defs/monthly"},
+          "paid_retention_rate": {"type": "number", "minimum": 0, "maximum": 1},
+          "free_retention_rate": {"type": "number", "minimum": 0, "maximum": 1},
+          "free_service_cost": {"type": "number", "minimum": 0},
+          "limit_month": {"type": "integer", "minimum": 1, "maximum": 36},
+          "limit_conversion_rate": {"type": "number", "minimum": 0, "maximum": 1},
+          "later_conversion_rate": {"type": "number", "minimum": 0, "maximum": 1},
+          "source_ids": {"type": "array", "items": {"type": "string"}}
+        }, "additionalProperties": true
+      }
+    },
+    "operating": {
+      "type": "object", "required": ["fixed_monthly", "payroll_monthly", "marketing_monthly"],
+      "properties": {
+        "fixed_monthly": {"$ref": "#/$defs/monthly"},
+        "payroll_monthly": {"$ref": "#/$defs/monthly"},
+        "marketing_monthly": {"$ref": "#/$defs/monthly"},
+        "capex_monthly": {"$ref": "#/$defs/monthly"},
+        "working_capital_delta_monthly": {"$ref": "#/$defs/signedMonthly"},
+        "capex_useful_life_months": {"type": "integer", "minimum": 1},
+        "depreciation_monthly_override": {"$ref": "#/$defs/monthly"}
+      }, "additionalProperties": true
+    },
+    "taxes": {
+      "type": "object", "required": ["source", "verified", "employer_payroll_rate", "corporate_income_rate"],
+      "properties": {
+        "source": {"type": "string"}, "effective_date": {"type": "string"},
+        "verified": {"type": "boolean"},
+        "employer_payroll_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "corporate_income_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "turnover_tax_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "vat_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "vat_taxable_revenue_share": {"type": "number", "minimum": 0, "maximum": 1},
+        "vat_creditable_opex_share": {"type": "number", "minimum": 0, "maximum": 1},
+        "vat_creditable_capex_share": {"type": "number", "minimum": 0, "maximum": 1},
+        "corporate_tax_payment_lag_months": {"type": "integer", "minimum": 0, "maximum": 36},
+        "vat_payment_lag_months": {"type": "integer", "minimum": 0, "maximum": 36},
+        "loss_carryforward": {"type": "boolean"}
+      }, "additionalProperties": true
+    },
+    "financing": {
+      "type": "object", "properties": {
+        "opening_cash": {"type": "number"},
+        "minimum_cash_reserve": {"type": "number", "minimum": 0},
+        "equity_injections_monthly": {"$ref": "#/$defs/monthly"},
+        "investor_contributions_monthly": {"$ref": "#/$defs/monthly"},
+        "debt_draws_monthly": {"$ref": "#/$defs/monthly"},
+        "debt_principal_monthly": {"$ref": "#/$defs/monthly"},
+        "dividends_monthly": {"$ref": "#/$defs/monthly"},
+        "debt_interest_rate_monthly": {"type": "number", "minimum": 0, "maximum": 1}
+      }, "additionalProperties": true
+    },
+    "valuation": {"type": "object", "properties": {
+      "annual_discount_rate": {"type": "number", "minimum": 0},
+      "pre_money_valuation": {"type": "number", "minimum": 0},
+      "investor_equity_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+      "exit_proceeds_monthly": {"$ref": "#/$defs/monthly"}
+    }, "additionalProperties": true},
+    "scenarios": {"type": "array", "items": {"type": "object", "required": ["name", "volume_multiplier", "price_multiplier", "variable_cost_multiplier", "fixed_cost_multiplier", "retention_delta"],
+      "properties": {"name": {"type": "string"},
+        "volume_multiplier": {"type": "number", "minimum": 0},
+        "price_multiplier": {"type": "number", "minimum": 0},
+        "variable_cost_multiplier": {"type": "number", "minimum": 0},
+        "fixed_cost_multiplier": {"type": "number", "minimum": 0},
+        "retention_delta": {"type": "number", "minimum": -1, "maximum": 1},
+        "conversion_multiplier": {"type": "number", "minimum": 0}
+      }, "additionalProperties": true}},
+    "evidence": {"type": "array", "items": {"type": "object"}},
+    "market": {"type": "object"}
+  },
+  "$defs": {
+    "monthly": {"oneOf": [{"type": "number", "minimum": 0}, {"type": "array", "minItems": 1, "maxItems": 36, "items": {"type": "number", "minimum": 0}}]},
+    "signedMonthly": {"oneOf": [{"type": "number"}, {"type": "array", "minItems": 1, "maxItems": 36, "items": {"type": "number"}}]}
+  }, "additionalProperties": true
+}
