@@ -35,6 +35,8 @@ Use the initial research to narrow your next experiment. Desk research and forec
 
 ## Quick install
 
+First install the runtime dependencies using the [Linux, Windows and macOS setup guide](docs/INSTALLATION.md). It includes project-local and global skill setup, PDF conversion, verification commands and the current Excel export limitation.
+
 From your target project, run:
 
 ```bash
@@ -72,9 +74,11 @@ Python installer paths: Codex/Cursor `.agents/skills/`; Claude Code `.claude/ski
 ## Requirements
 
 - **Python 3.10+** for deterministic finance and audits. Financial calculation itself uses only the standard library.
-- **Node.js 18+** and **PptxGenJS** for editable slides: `npm install`.
+- **Node.js 22.20+** for the Skills CLI (the slide generator itself supports Node.js 18+) and **PptxGenJS 4.0.0** for editable slides: `npm install` in a repository checkout.
 - **artifact_tool** for formula-driven Excel export (optional; available in compatible artifact environments).
 - **LibreOffice** to export a PDF preview (optional).
+
+Skill installation does not install these dependencies. For commands on each operating system and correct npm dependency placement, follow the [dependency setup guide](docs/INSTALLATION.md). Standalone Excel export currently requires a compatible `artifact_tool` environment; there is no bundled installer for that dependency.
 
 ## Demo — one command
 

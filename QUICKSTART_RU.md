@@ -1,5 +1,7 @@
 # Быстрый запуск Business Analyst + Investor Slides
 
+Перед запуском установи зависимости по [инструкции для Linux, Windows и macOS](docs/INSTALLATION.md): Python, Node.js, PptxGenJS и, при необходимости, LibreOffice. Там же описаны проверки установки и ограничение экспорта Excel через `artifact_tool`.
+
 ## 1. Создать GitHub-репозиторий
 
 Распакуй архив и загрузи **содержимое папки `investment-skillkit`** в новый репозиторий. В корне должны находиться `README.md`, `install.py`, `package.json` и папка `skills/`. Не нужно загружать `.zip` как единственный файл репозитория.
